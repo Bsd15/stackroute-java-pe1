@@ -10,11 +10,11 @@ import java.util.Scanner;
  */
 public class CharacterCheck {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a character: ");
         try {
             /*Take only one character as input*/
-            char ch = s.next(".").charAt(0);
+            char ch = scanner.next(".").charAt(0);
             int characterType = Character.getType(ch);
             switch (characterType) {
                 case Character.UPPERCASE_LETTER:
@@ -35,10 +35,10 @@ public class CharacterCheck {
                 default:
                     System.out.println("Other");
             }
-        } catch (Exception e) {
+        } catch (Exception exception) {
             System.out.println("Please enter only one character");
         }
         /*Close the scanner*/
-        s.close();
+        scanner.close();
     }
 }

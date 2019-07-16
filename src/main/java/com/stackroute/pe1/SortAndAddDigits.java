@@ -13,9 +13,9 @@ import java.util.Scanner;
  */
 public class SortAndAddDigits {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number: ");
-        int number = s.nextInt();
+        int number = scanner.nextInt();
         int tempNumber = number;
         int sum = 0;
         ArrayList<Integer> digitsArray = new ArrayList<>();
@@ -34,6 +34,6 @@ public class SortAndAddDigits {
         System.out.println("Sum of even number: " + sum);
         System.out.println((sum > 15)?"True":"False");
         /*Close the scanner*/
-        s.close();
+        scanner.close();
     }
 }

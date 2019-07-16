@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class StringReverse {
     public String stringReverse(String input) {
-        Scanner s = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         /*Convert the given string into Char array*/
         char[] inputArray = input.toCharArray();
         /*Get the length of the array*/
@@ -22,6 +22,7 @@ public class StringReverse {
         }
         /*Convert the character array into string by passing into String constructor*/
         String reversedString = new String(reverseArray);
+        scanner.close();
         return (reversedString);
     }
 }

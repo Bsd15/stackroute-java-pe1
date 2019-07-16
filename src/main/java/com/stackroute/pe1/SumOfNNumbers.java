@@ -10,21 +10,21 @@ import java.util.Scanner;
  */
 public class SumOfNNumbers {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter numbers (enter any character to stop reading): ");
         int number = 0;
         int sum = 0;
         while (true) {
             try {
-                number = s.nextInt();
+                number = scanner.nextInt();
                 sum += number;
                 System.out.println("Sum: " + sum);
-            } catch (InputMismatchException ime) {
+            } catch (InputMismatchException inputMismatchException) {
                 System.out.println("Please enter integers only");
                 break;
             }
         }
         /*Close the scanner*/
-        s.close();
+        scanner.close();
     }
 }

@@ -15,7 +15,7 @@ public class GuessTheNumber {
     private static final int max = 50;
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         /*Pick a random number within the "min" and "max" limit*/
         final int pickedNumber = random.nextInt((max - min) + 1) + min;
@@ -25,7 +25,7 @@ public class GuessTheNumber {
         /*Loop until the user guesses correctly*/
         while (true) {
             System.out.println("Enter your guess: ");
-            guess = s.nextInt();
+            guess = scanner.nextInt();
             if (guess == pickedNumber){
                 System.out.println("Number guessed matches the original number");
                 break;
@@ -36,6 +36,6 @@ public class GuessTheNumber {
             }
         }
         /*Close the scanner*/
-        s.close();
+        scanner.close();
     }
 }
